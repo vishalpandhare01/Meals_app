@@ -7,8 +7,10 @@ import {
   Platform,
 } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
 
 export default function CatogoryGridTie({ title, color ,onPress}) {
+    // const navigation  = useNavigation()
   return (
     <View style={styles.gridItem}>
       <Pressable
@@ -34,8 +36,6 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 16,
     height: 150,
-
-
     elevation: 4, //shadow in android
     shadowColor: "black",
     shadowOpacity: 0.25,
