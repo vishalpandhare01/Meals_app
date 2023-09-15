@@ -7,33 +7,46 @@ import {
   Platform,
 } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
+import { useEffect } from "react";
+import MealDetials from "./MealDetials";
+
 export default function MealItems({
+  id,
   title,
   imageUrl,
   complexity,
   affordability,
   duration,
 }) {
+  const navigation = useNavigation();
+  function getMealDetialsscreen() {
+    navigation.navigate("MealDetial", {
+      mealId: id,
+    });
+  }
+
   return (
     <View style={styles.mealItem}>
       <Pressable
-        android_ripple={{ color: "#ccc" }}//android
+        android_ripple={{ color: "#ccc" }} //android
         // style for ios
         style={({ pressed }) => [
           styles.buttonStyle,
           pressed ? styles.buttonPressed : null,
         ]}
+        onPress={getMealDetialsscreen}
       >
         <View>
           <View>
             <Image style={styles.image} source={{ uri: imageUrl }} />
             <Text style={styles.title}>{title}</Text>
           </View>
-          <View style={styles.detials}>
-            <Text style={styles.detialItem}>{duration}</Text>
-            <Text style={styles.detialItem}>{complexity.toUpperCase()}</Text>
-            <Text style={styles.detialItem}>{affordability.toUpperCase()}</Text>
-          </View>
+          <MealDetials
+            duration={duration}
+            complexity={complexity}
+            affordability={affordability}
+          />
         </View>
       </Pressable>
     </View>
@@ -68,17 +81,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     margin: 8,
   },
-  detials: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 8,
-  },
-  detialItem: {
-    marginHorizontal: 4,
-    fontSize: 12,
-  },
-  buttonPressed:{
-    opacity:0.5,
+  buttonPressed: {
+    opacity: 0.5,
   },
 });

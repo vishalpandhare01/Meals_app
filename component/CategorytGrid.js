@@ -20,6 +20,7 @@ export default function CatogoryGridTie({ title, color ,onPress}) {
             pressed ? styles.buttonPressed : null
         ]}
         onPress={onPress}
+        
       >
         <View style={[styles.innerContainer,{backgroundColor:color}]}>
           <Text style={styles.title}>{title}</Text>

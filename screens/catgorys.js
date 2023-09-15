@@ -5,7 +5,6 @@ import CatogoryGridTie from "../component/CategorytGrid";
 export default function CatogorysScreen({ navigation }) {
   function renderCatigoryItem(itemData) {
     function pressModuler() {
-      console.log("presss");
       navigation.navigate("MealsOverview",{
         categoryId:itemData.item.id
       })
