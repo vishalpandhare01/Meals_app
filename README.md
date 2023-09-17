@@ -11,3 +11,6 @@ Here are some images from the recipe book:
 <img src="https://github.com/vishalpandhare01/Recipe-_book/assets/99859675/39cf5c51-7991-4603-b8ee-dbbf9c7d8a45" width="300" height="500">
 <img src="https://github.com/vishalpandhare01/Recipe-_book/assets/99859675/941ed6b9-e941-4b20-96a5-73876ab312a2" width="300" height="500">
 <img src="https://github.com/vishalpandhare01/Recipe-_book/assets/99859675/543b6fd2-9773-4211-bf82-0df92d260049" width="300" height="500">
+
+##### React redux 
+https://academind.com/tutorials/reactjs-redux-vs-context-api
