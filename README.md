@@ -14,3 +14,12 @@ Here are some images from the recipe book:
 
 ##### React redux 
 https://academind.com/tutorials/reactjs-redux-vs-context-api
+
+###### release apk by
+https://docs.expo.dev/build/introduction/
+
+"android": {
+        "buildType": "apk"
+      },
+
+eas build -p android  --profile preview
