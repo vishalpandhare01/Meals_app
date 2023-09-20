@@ -23,3 +23,6 @@ https://docs.expo.dev/build/introduction/
       },
 
 eas build -p android  --profile preview
+
+- you can download unsafe app from following link
+https://expo.dev/accounts/vishalpandhare01/projects/meal-app/builds/f1028278-b135-4ecf-8792-26dad146b92d
